@@ -1,7 +1,7 @@
 ---
 title: SISTEMI
 created: '2019-11-12T09:40:54.373Z'
-modified: '2019-11-23T08:22:14.217Z'
+modified: '2019-11-23T08:29:25.551Z'
 ---
 
 # SISTEMI
@@ -185,12 +185,14 @@ Descrizione: Block: DMZ to WAN
 |Pass|any| Lan net|any|any|any|Default LAN -> any  
 
 **WAN**
+
 |Action|Proto|Source|Port|Destination|Port|Description|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Pass|TCP|host-pcospitante|any|WAN address|80|Allow: accesso web al m0n0wall dal PC ospitante  
 |Pass|TCP|any|any|host-server|22| NAT Server in SSH 
 
 **DMZ**
+
 |Action|Proto|Source|Port|Destination|Port|Description|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Block|any|DMZ net|any|LAN net| any|Block: DMZ to LAN  
