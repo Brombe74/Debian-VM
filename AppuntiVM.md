@@ -1,7 +1,7 @@
 ---
 title: SISTEMI
 created: '2019-11-12T09:40:54.373Z'
-modified: '2019-11-23T08:29:25.551Z'
+modified: '2019-11-28T11:09:52.732Z'
 ---
 
 # SISTEMI
@@ -27,47 +27,6 @@ metto la spunta
 
 (Mettere nella relazione gli alias del quaderno)
 
-<p style="color:red";>**Firewall->Rules**</p>
-
-**LAN**
-Action: Block
-Protocol: TCP/UDP
-Source: any
-Source port range: any
-Destination: NOT  Single host or alias "host-router-lan"
-Destination port range: DNS
-Descrizione: Block: Lan to WAN-DNS
-
-Protocol: TCP/UDP
-Source: LAN
-Port: any
-Destination: DMZ
-Port: HTTP
-Descrizione: Pass: LAN to DMZ (HTTP)
-fare un'altra con https
-
-**WAN**
-Protocol: TCP/UDP
-Source: WAN
-Port: any
-Destination: DMZ
-Port: HTTP
-Descrizione: Pass: WAN to DMZ (HTTP)
-fare un'altra con https
-
-**DMZ**
-Protocol: ICMP
-ICMP type: any
-Souce: DMZ
-Destination: WAN
-Descrizione: DMZ to WAN (ICMP)
-
-Protocol: TCP/UDP
-Source: DMZ
-Port: any
-Destination: WAN
-Port: DNS
-Descrizione DMZ to WAN (DNS)
 
 ### 21/11/2019
 
@@ -197,5 +156,23 @@ Descrizione: Block: DMZ to WAN
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Block|any|DMZ net|any|LAN net| any|Block: DMZ to LAN  
 |Pass| any|DMZ net|any|any|any|Allow: DMZ to any  
+
+### 29/11/2019
+
+Collaudo DNS
+host www.e-fermi.it oppure host 176.15.10.219 (opzionale: 8.8.8.8, server che farà la risoluzione)
+
+Installare elinx su macchina 
+
+Firewall->Rules
+Name: apt-cacher
+IP: 172.30.1.199
+Description: Server updates
+
+LAN->MONOWALL Porta 80  NO RESTRIZIONI
+LAN->SERVER Porta 80
+
+Server->MONOWALL Porta 8080 RESTRIZIONI
+WAN->MONOWALL Porta 8080
 
 
