@@ -1,7 +1,7 @@
 ---
 title: SISTEMI
 created: '2019-11-12T09:40:54.373Z'
-modified: '2019-11-28T11:09:52.732Z'
+modified: '2019-12-05T10:59:51.462Z'
 ---
 
 # SISTEMI
@@ -175,4 +175,14 @@ LAN->SERVER Porta 80
 Server->MONOWALL Porta 8080 RESTRIZIONI
 WAN->MONOWALL Porta 8080
 
+### 5/12/2019
+server
+ip : 192.1683.112.250
+GUARDARE SCREEN 
+sudo systemctl status apache2 =vedere se è stato installato con successo 
+sudo /var/www/html
+nano index.html
+modificare mettere il cognome davanti ad "apache2 default *debian si cancella* default page"
 
+dal client andare su 192.168.112.250
+apt install apache2 --fix-missing
