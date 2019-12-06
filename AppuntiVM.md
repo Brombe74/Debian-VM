@@ -120,7 +120,8 @@ Descrizione: Block: DMZ to WAN
 |Pass|TCP|host-pcospitante| any|WAN address| 80| PAllow: accesso web al m0n0wall dal PC ospitante  
 |Pass|TCP|any|any|host-server|22|NAT Server in SSH  
 |Pass|TCP/UDP|WAN address|any|DMZ net|80|Pass: WAN to DMZ (HTTP)
-|Pass|TCP/UDP|WAN address|any|host-server|443|Pass: WAN to DMZ (HTTPS)   
+|Pass|TCP/UDP|WAN address|any|host-server|443|Pass: WAN to DMZ (HTTPS)
+|Pass|ICMP|any|any|WAN address|any|Allow: ping to WAN
 
 **DMZ**
 
