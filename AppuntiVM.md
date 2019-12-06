@@ -29,7 +29,7 @@ Implementare delle regole di firewall secondo questa tabella
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Pass|any| Lan net|any|any|any|Default LAN -> any  
 |Pass|TCP|LAN net|53(DNS)|host-router-lan|53(DNS)|Pass: LAN to Router-LAN-DNS
-|Block|TCP/UDP/LAN net| 53(DNS)|WAN address|53(DNS)|Block:KAN to WAN-DNS
+|Block|TCP/UDP|LAN net| 53(DNS)|WAN address|53(DNS)|Block:LAN to WAN-DNS
 |Pass|TCP/UDP|LAN net|any|DMZ net|80(HTTP)|Pass: LAN to DMZ-HTTP
 |Pass|TCP/UDP|LAN net|any|DMZ net|443(HTTPS)|Pass: LAN to DMZ-HTTPS
 
