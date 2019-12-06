@@ -45,7 +45,7 @@ Implementare delle regole di firewall secondo questa tabella
 |Action|Proto|Source|Port|Destination|Port|Description|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Pass|TCP|any|any|host-client|22(SSH)|NAT DMZ to LAN in SSH port 2222
-|Block|any|any|host-client|22(SSH)|Block: DMZ to LAN in SSH
+|Block|TCP|any|any|host-client|22(SSH)|Block: DMZ to LAN in SSH
 |Pass|TCP/UDP|DMZ net|any|host-client|22(SSH)|Allow: DMZ to Client, normally DISABLED
 |Block|any|DMZ net|any|LAN net| any|Block: DMZ to LAN  
 |Pass| any|DMZ net|any|any|any|Allow: DMZ to any, normally DISABLED
