@@ -1,7 +1,7 @@
 ---
 title: SISTEMI
 created: '2019-11-12T09:40:54.373Z'
-modified: '2019-12-19T10:11:26.232Z'
+modified: '2020-01-07T08:44:39.450Z'
 ---
 
 # SISTEMI
@@ -215,3 +215,5 @@ Da C1 mando un qualcosa a C2, R2 vede che hanno mandato un qualcosa, R2 riesce a
 Una volta nato il NAT questa metodologia non andava più bene, si è iniziato ad usare una ipsec di tipo tunnel.
 Crea un livello 3 in più, quello sotto è *"ipsec"* e come indirizzo avrà indirizzo di rete pubblico e destinazione il pubblico del router destinatario, nell'altro ci sarà l'indirizzo privato di C1 e C2
 Provare a pingare S2 con C1
+
+
