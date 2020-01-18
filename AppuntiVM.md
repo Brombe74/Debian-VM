@@ -1,7 +1,7 @@
 ---
 title: SISTEMI
 created: '2019-11-12T09:40:54.373Z'
-modified: '2020-01-07T08:44:39.450Z'
+modified: '2020-01-18T08:21:12.968Z'
 ---
 
 # SISTEMI
@@ -215,5 +215,30 @@ Da C1 mando un qualcosa a C2, R2 vede che hanno mandato un qualcosa, R2 riesce a
 Una volta nato il NAT questa metodologia non andava più bene, si è iniziato ad usare una ipsec di tipo tunnel.
 Crea un livello 3 in più, quello sotto è *"ipsec"* e come indirizzo avrà indirizzo di rete pubblico e destinazione il pubblico del router destinatario, nell'altro ci sarà l'indirizzo privato di C1 e C2
 Provare a pingare S2 con C1
+
+### 16/01/2020
+
+openvpn funziona su userspace (5-6-7)
+
+chiave simmetrica 
+
+ip dovranno essere tipo 192.168.200+lato.1
+log -append, crea file di log 
+tail -f nomefile 
+
+**GUIDA** https://wiki.debian.org/OpenVPN
+
+### 18/01/2020
+
+*dentro il file /etc/openvpn/tun.conf*
+dev tunnumerogrande
+port 1194
+proto udp 
+ifcpmfog ip1 ip2
+*client*remote ipwan2
+secret percorso file chiave */etc/openvpn/chiave.key*
+log-append /var/log/openvpn-miavpn.log
+comp-lzo //direttiva per comprimere il traffico 
+keepalive 10 120
 
 
